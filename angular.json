@@ -6,9 +6,12 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "management-dashboard-v1": {
+    "Rocker": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -20,27 +23,51 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/management-dashboard-v1",
+            "allowedCommonJsDependencies": [
+              "chart.js"
+           ],
+            "outputPath": "dist/Rocker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon-32x32.png",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/icons.css",
+              "node_modules/angular-calendar/css/angular-calendar.css",
+              "node_modules/flatpickr/dist/flatpickr.min.css",
+              "src/assets/plugins/datatable/css/dataTables.bootstrap5.min.css",
+              "src/assets/sass/app.scss",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/plugins/jvector-map/jquery-jvectormap-2.0.2.min.js",
+              "src/assets/plugins/jvector-map/jquery-jvectormap-world-mill-en.js",
+              "src/assets/plugins/datatable/js/jquery.dataTables.min.js",
+              "src/assets/plugins/datatable/js/dataTables.bootstrap5.min.js",
+              "src/assets/plugins/sparkline-charts/jquery.sparkline.min.js",
+              "src/assets/plugins/morris/js/morris.js",
+              "src/assets/plugins/raphael/raphael-min.js",
+              "src/assets/plugins/chartjs/js/Chart.extension.js",
+              "src/assets/vendor/pace/pace.min.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -71,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "management-dashboard-v1:build:production"
+              "browserTarget": "Rocker:build:production"
             },
             "development": {
-              "browserTarget": "management-dashboard-v1:build:development"
+              "browserTarget": "Rocker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +109,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "management-dashboard-v1:build"
+            "browserTarget": "Rocker:build"
           }
         },
         "test": {
@@ -92,12 +119,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -105,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "management-dashboard-v1"
+  "defaultProject": "Rocker"
 }
