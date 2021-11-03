@@ -10,6 +10,8 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $.getScript("./assets/js/deafult-dashboard.js")
+
   }
 
 }
