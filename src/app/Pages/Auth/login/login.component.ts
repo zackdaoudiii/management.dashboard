@@ -11,14 +11,25 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
-  // On Forgotpassword link click
-  onForgotpassword() {
-    this.router.navigate(['forgot-password'], { relativeTo: this.route.parent });
-  }
+  // // On Forgotpassword link click
+  // onForgotpassword() {
+  //   this.router.navigate(['forgot-password'], { relativeTo: this.route.parent });
+  // }
+  //
+  // // On Signup link click
+  username :string;
+  password : string;
 
-  // On Signup link click
-  onSignup() {
-    this.router.navigate(['sign-up'], { relativeTo: this.route.parent });
+  onLogin() {
+
+    let data =  {
+       'username' : this.username,
+      'password ' : this.password
+    }
+    if(data){
+      console.log(data);
+    }
+    // this.router.navigate(['dashboard'], { relativeTo: this.route.parent });
   }
 
   ngOnInit(): void {

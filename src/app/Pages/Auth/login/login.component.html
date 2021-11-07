@@ -1,66 +1,44 @@
-<div class="bg-login">
-	<!--wrapper-->
-	<div class="wrapper">
-		<div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
-			<div class="container-fluid">
-				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
-					<div class="col mx-auto">
-						<div class="mb-4 text-center">
-							<img src="assets/images/logo-img.png" width="180" alt="" />
-						</div>
-						<div class="card">
-							<div class="card-body">
-								<div class="border p-4 rounded">
-									<div class="text-center">
-										<h3 class="">Sign in</h3>
-										<p>Don't have an account yet? <a href="JavaScript:;" (click)="onSignup()">Sign up here</a>
-										</p>
-									</div>
-									<div class="d-grid">
-										<a class="btn my-4 shadow-sm btn-white" href="#" (click)="$event.preventDefault()"> <span class="d-flex justify-content-center align-items-center">
-											<img class="me-2" src="assets/images/icons/search.svg" width="16" alt="Image Description">
-											<span>Sign in with Google</span>
-											</span>
-										</a> <a href="#" (click)="$event.preventDefault()" class="btn btn-facebook"><i class="bx bxl-facebook"></i>Sign in with Facebook</a>
-									</div>
-									<div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
-										<hr/>
-									</div>
-									<div class="form-body">
-										<form class="row g-3">
-											<div class="col-12">
-												<label for="inputEmailAddress" class="form-label">Email Address</label>
-												<input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address">
-											</div>
-											<div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Enter Password</label>
-												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="#" (click)="$event.preventDefault()" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-check form-switch">
-													<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-													<label class="form-check-label" for="flexSwitchCheckChecked">Remember Me</label>
-												</div>
-											</div>
-											<div class="col-md-6 text-end">	<a href="JavaScript:;" (click)="onForgotpassword()">Forgot Password ?</a>
-											</div>
-											<div class="col-12">
-												<div class="d-grid">
-													<button type="submit" class="btn btn-primary"><i class="bx bxs-lock-open"></i>Sign in</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--end row-->
-			</div>
-		</div>
-	</div>
-	<!--end wrapper-->
+<!-- wrapper -->
+<div class="wrapper">
+  <div class="authentication-reset-password d-flex align-items-center justify-content-center">
+    <div class="row">
+      <div class="col-12 col-lg-10 mx-auto">
+        <div class="card">
+          <div class="row g-0">
+            <div class="col-lg-5 border-end">
+              <div class="card-body">
+                <div class="p-5">
+                  <div class="text-start">
+                    <img src="assets/images/logo-img.png" width="180" alt="">
+                  </div>
+                  <h4 class="mt-5 font-weight-bold">Login</h4>
+                  <p class="text-muted">Welcome To Zyn Management </p>
+
+                  <div class="mb-3 mt-5">
+                    <label class="form-label">Email or Username</label>
+                    <input type="text" class="form-control" placeholder="Enter Email or Username"  [(ngModel)]="username" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="text" class="form-control" placeholder="password" [(ngModel)]="password" />
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-primary" (click)="onLogin()">Login</button>
+                    <a href="https://www.linkedin.com/in/zakaria-daoudi/"><p>All Right Reserved  © to ZYNCompany</p></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+
+              <img src="assets/images/login-images/Login-Page.jpg" class="card-img login-img h-100" alt="...">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- end wrapper -->

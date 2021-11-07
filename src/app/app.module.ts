@@ -27,6 +27,10 @@ import { FooterComponent } from './Components/Layout/footer/footer.component';
 import { LayoutComponent } from './Components/Layout/layout/layout.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { ListProductsComponent } from './Pages/Products/list-products/list-products.component';
+import { AddProductComponent } from './Pages/Products/add-product/add-product.component';
+import { UpdateProductComponent } from './Pages/Products/update-product/update-product.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -36,17 +40,21 @@ import { DashboardComponent } from './Pages/dashboard/dashboard.component';
     SideBarComponent,
     FooterComponent,
     LayoutComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListProductsComponent,
+    AddProductComponent,
+    UpdateProductComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    NgbModule,
-    HttpClientModule,
-    NgbModule,
-    AppRoutingModule,
-    PerfectScrollbarModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        NgbModule,
+        HttpClientModule,
+        NgbModule,
+        AppRoutingModule,
+        PerfectScrollbarModule,
+        FormsModule
+    ],
   providers: [
     { provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG }
   ],
