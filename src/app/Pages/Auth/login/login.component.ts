@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     if(data){
       console.log(data);
     }
-    // this.router.navigate(['dashboard'], { relativeTo: this.route.parent });
+    this.router.navigate(['dashboard'], { relativeTo: this.route.parent });
   }
 
   ngOnInit(): void {
